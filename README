@@ -1,0 +1,18 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1445
+
+Usage:
+   This script adds one new command ":AllBuffersToOneWindow".
+   You can use the ":AllBuffersToOneWindow" command to load buffers that are
+   loaded in remote Vim window in main Vim window.
+
+   1. Run Vim application (process A), and edit File1, File2, FIle3.
+   2. Run Vim application (process B), and edit File4, File5
+   3. Run Vim application (process C), and input ":AllBuffersToOneWindow"
+      command.
+   4. Input ":buffers" command. (Vim application process C)
+      File1, File2, File3, File4 and File5 are added to buffer list.
+
+Note:
+   o  To run this script, Vim needs to be compiled with "+clientserver" option.
+   o  If buffer is file and can be read, buffer will be loaded in main Vim window.
+   o  If buffer is already loaded in main window, buffer will not be loaded.
